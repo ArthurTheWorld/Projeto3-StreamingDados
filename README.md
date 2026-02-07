@@ -10,6 +10,9 @@ Fluxo do pipeline:
 
 Yahoo Finance → Kafka → Spark Structured Streaming → GCS / BigQuery
 
+
+
+
 projeto_3_streaming_dados_financeiros/
 │
 ├── app/
