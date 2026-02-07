@@ -1,0 +1,4 @@
+PFE
+AAPL
+MSFT
+AMZN

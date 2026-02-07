@@ -1,0 +1,10 @@
+services:
+  spark:
+    build: .
+    container_name: spark_gcs
+    ports:
+      - "8080:8080"
+      - "4040:4040"
+    volumes:
+      - ./app:/app
+      - ./jars:/opt/spark/jars
