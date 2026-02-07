@@ -23,7 +23,7 @@ hadoop_conf = spark._jsc.hadoopConfiguration()
 hadoop_conf.set("google.cloud.auth.service.account.enable", "true")
 hadoop_conf.set(
     "google.cloud.auth.service.account.json.keyfile",
-    "/app/portfolio-projeto-3-486022-c80446521334.json"
+    "/app/.json"
 )
 hadoop_conf.set(
     "fs.gs.impl",
