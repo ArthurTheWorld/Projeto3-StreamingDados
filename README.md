@@ -10,22 +10,21 @@ Fluxo do pipeline:
 
 Yahoo Finance → Kafka → Spark Structured Streaming → GCS / BigQuery
 
-Estrutura do Projeto
 projeto_3_streaming_dados_financeiros/
 │
 ├── app/
-│   ├── yfinance_listener.py
-│   ├── gcs_silver_layer_writer.py
-│   ├── gcs_reader.py
-│   ├── carteira.txt
-│   └── requirements.txt
+│   ├── yfinance_listener.py           # Publicador Kafka que escuta cotações via Yahoo Finance
+│   ├── gcs_silver_layer_writer.py     # Spark Streaming Consumer que grava no GCS
+│   ├── gcs_reader.py                  # Leitor para leitura e debug da camada silver
+│   ├── carteira.txt                   # Lista de ativos a serem monitorados
+│   └── requirements.txt               # Dependências da aplicação Python
 │
 ├── jars/
-│   └── gcs-connector-*.jar
+│   └── gcs-connector-*.jar            # Conector do GCS para o Spark
 │
-├── docker-compose.yaml
-├── Dockerfile
-└── README.md
+├── docker-compose.yaml                # Sobe a infraestrutura com Kafka, Spark, etc.
+├── Dockerfile                         # Container para execução da aplicação
+└── README.md                          # Este arquivo
 
 
 Descrição dos principais arquivos:
